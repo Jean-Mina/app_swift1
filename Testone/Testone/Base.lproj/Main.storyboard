@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Testone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47h-Bh-ATr">
+                                <rect key="frame" x="144" y="20" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-J2-I7z">
+                                <rect key="frame" x="164" y="72" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="IAmNotRich" destination="BYZ-38-t0r" eventType="touchUpInside" id="tC3-bu-sQZ"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4ar-bG-Y1d">
+                                <rect key="frame" x="16" y="136" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Blue"/>
+                                    <segment title="Red"/>
+                                    <segment title="Green"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ChangeColor" destination="BYZ-38-t0r" eventType="valueChanged" id="T4u-xK-SvN"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3kh-J2-I7z" firstAttribute="top" secondItem="47h-Bh-ATr" secondAttribute="bottom" constant="31" id="8nz-w0-kt9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3kh-J2-I7z" secondAttribute="trailing" constant="149" id="BMp-ko-MdT"/>
+                            <constraint firstItem="4ar-bG-Y1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GUi-IE-XFW"/>
+                            <constraint firstItem="47h-Bh-ATr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Him-tF-kta"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="47h-Bh-ATr" secondAttribute="bottom" constant="626" id="NEj-bB-qvu"/>
+                            <constraint firstItem="47h-Bh-ATr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="128" id="VE8-Ur-hDA"/>
+                            <constraint firstItem="4ar-bG-Y1d" firstAttribute="top" secondItem="3kh-J2-I7z" secondAttribute="bottom" constant="34" id="YKe-Qu-vew"/>
+                            <constraint firstItem="4ar-bG-Y1d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e3j-sh-nFv"/>
+                            <constraint firstItem="3kh-J2-I7z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="gDs-nO-JSY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="47h-Bh-ATr" secondAttribute="trailing" constant="129" id="vAG-OP-Tev"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mSegmentedBar" destination="4ar-bG-Y1d" id="79i-f2-jdp"/>
+                        <outlet property="mTitleLabel" destination="47h-Bh-ATr" id="jwd-Ku-vGA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="69.715142428785612"/>
+        </scene>
+    </scenes>
+</document>
